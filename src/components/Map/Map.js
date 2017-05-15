@@ -17,9 +17,7 @@ class Map extends Component {
 	areaName = "";
 
 	initMap() {
-      	if(window.google) {
-      			 let marker , mapObj;
-
+				let mapObj , marker;
 	      		// if(this.props.parentProps.mapObject === undefined) {
 	      			mapObj = new window.google.maps.Map(document.getElementById('map'), {
 	      			  center: this.props.location,
@@ -29,7 +27,6 @@ class Map extends Component {
 	      			// this.props.parentProps.updateGoogleObj(mapObj);
 			 		// this.setState({"mapObj" : mapObj});
 		            
-			 		console.log(this.state.mapObj);
 
 		            marker = new window.google.maps.Marker({
 			          position: this.props.location,
@@ -39,7 +36,6 @@ class Map extends Component {
       				mapObj.setCenter(this.props.location);
       			// }
       	
-      	}
 	}
 
 	fetchLocationData() {
